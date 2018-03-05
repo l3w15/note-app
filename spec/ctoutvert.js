@@ -4,7 +4,7 @@
       if(!testParam) {
         throw new Error(`Expected true but got ${testParam}`);
       } else {
-        console.log('  Passes test!')
+        console.log("  Passes test!")
       }
     },
 
@@ -12,7 +12,7 @@
       if(!testParam === equalityTest) {
         throw new Error(`Expected ${testParam} to equal ${equalityTest}`);
       } else {
-        console.log(`${testParam} is equal to ${equalityTest}`)
+        console.log("  Passes test!")
       }
     },
   };
