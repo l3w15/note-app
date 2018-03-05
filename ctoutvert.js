@@ -1,8 +1,6 @@
 (function(exports) {
   var expect = {
-    toBeTrue: function(testParam, func, testString) {
-      console.log(func);
-      console.log("  " + testString);
+    toBeTrue: function(testParam) {
       if(!testParam) {
         throw new Error(`Expected true but got ${testParam}`);
       } else {
@@ -10,15 +8,27 @@
       }
     },
 
-    toEqual: function(equalityTest, testParam, func, testString) {
-      console.log(func);
-      console.log("  " + testString);
+    toBeEqual: function(equalityTest, testParam) {
       if(!testParam === equalityTest) {
         throw new Error(`Expected ${testParam} to equal ${equalityTest}`);
       } else {
-        console.log('  Does stuff!')
+        console.log(`${testParam} is equal to ${equalityTest}`)
       }
     },
   };
+
+  var describe = function(string) {
+    console.log(string)
+  };
+
+  var it = function(string) {
+    console.log("   " + string)
+  };
+
   exports.expect = expect;
+  exports.describe = describe;
+  exports.it = it;
+
 })(this);
+
+
