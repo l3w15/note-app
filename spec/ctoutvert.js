@@ -10,7 +10,7 @@
 
     toBeEqual: function(testParam, equalityTest) {
       if(testParam !== equalityTest) {
-        throw new Error(`Expected ${testParam.toString()} to equal ${equalityTest}`);
+        throw new Error(`Expected ${testParam} to equal ${equalityTest}`);
       } else {
         console.log("  Passes test!")
       }
