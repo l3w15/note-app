@@ -1,13 +1,20 @@
 (function(exports) {
-  function NoteList() {
+  function NoteList(noteClass = Note) {
+    this.noteClass = noteClass
     this.list = []
   };
 
   NoteList.prototype = {
-    addNote: function(note) {
-      this.list.push(note)
+    addNote: function(string) {
+      this.list.push(new this.noteClass(string));
+    },
+
+    getNotes: function() {
+      return this.list;
     }
   }
 
-  exports.NoteList = NoteList
+
+
+  exports.NoteList = NoteList;
 })(this);

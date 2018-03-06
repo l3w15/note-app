@@ -1,8 +1,12 @@
-var notelist = new NoteList
+"use-strict"
 
-noteListStoresNotes();
+var notelist = new NoteList(noteClass = ??);
+var test = new Note("FRED");
+var note2 = new Note("Note 2");
+
 noteListInitiatedWithEmptyArray();
-
+noteListStoresNotes();
+noteListDisplaysNotes();
 
 function noteListInitiatedWithEmptyArray() {
   // var notelist = new NoteList
@@ -18,9 +22,13 @@ function noteListStoresNotes() {
   // var notelist = new NoteList
   describe("addNote")
     it("adds notes to the array");
-      note = new Note("TEST")
-      notelist.addNote(note)
-      console.log(notelist.list[0])
-      console.log(note)
-      expect.toBeEqual(notelist.list[0], note)
+      notelist.addNote("TEST");
+      expect.toBeEqual(notelist.list[0].text, "TEST");
+};
+
+function noteListDisplaysNotes() {
+  describe("displayNotes");
+    it("displays all the notes in the array");
+      notelist.addNote("Note 2");
+      expect.toBeEqual(notelist.getNotes(), );
 };
