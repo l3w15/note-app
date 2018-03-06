@@ -15,6 +15,14 @@
         console.log("  Passes test!")
       }
     },
+
+    arraysToBeEqual: function(array1, array2) {
+      for (var i = 0; i < array1.length; i++) {
+        if (array1[i] !== array2[i]) {
+          throw new Error (`${array1[i]} does not equal ${array2[i]}`)
+        }
+      } console.log(" Passes test!")
+    }
   };
 
   var describe = function(string) {
