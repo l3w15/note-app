@@ -1,5 +1,11 @@
+var notelist = new NoteList
+
+noteListStoresNotes();
+noteListInitiatedWithEmptyArray();
+
+
 function noteListInitiatedWithEmptyArray() {
-  var notelist = new NoteList
+  // var notelist = new NoteList
   describe("New note list")
   it("is initiated with an array");
   expect.toBeTrue(Array.isArray(notelist.list));
@@ -7,10 +13,9 @@ function noteListInitiatedWithEmptyArray() {
   expect.toBeEqual(notelist.list.length, 0);
 };
 
-noteListInitiatedWithEmptyArray();
 
 function noteListStoresNotes() {
-  var notelist = new NoteList
+  // var notelist = new NoteList
   describe("addNote")
     it("adds notes to the array");
       note = new Note("TEST")
@@ -19,5 +24,3 @@ function noteListStoresNotes() {
       console.log(note)
       expect.toBeEqual(notelist.list[0], note)
 };
-
-noteListStoresNotes();
