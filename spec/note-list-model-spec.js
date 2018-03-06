@@ -1,6 +1,6 @@
 "use-strict"
 
-var notelist = new NoteList(noteClass = test);
+var notelist = new NoteList;
 var test = new Note("FRED");
 var note2 = new Note("Note 2");
 
