@@ -1,7 +1,8 @@
 "use-strict"
 
 var notelist = new NoteList;
-var test = new Note("FRED");
+var note1 = new Note("TEST");
+var fred = new Note("FRED");
 var note2 = new Note("Note 2");
 
 noteListInitiatedWithEmptyArray();
@@ -30,7 +31,7 @@ function noteListDisplaysNotes() {
   describe("displayNotes");
     it("displays all the notes in the array");
     var notelist2 = new NoteList
-      notelist2.list.push(test);
+      notelist2.list.push(note1);
       notelist2.list.push(note2);
-      expect.arraysToBeEqual(notelist2.getNotes(), [test, note2]);
+      expect.arraysToBeEqual(notelist2.getNotes(), [note1, note2]);
 };
